@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Lobster&family=Poppins:wght@300;400;500;600&display=swap');
+
+@font-face {
+    font-family: digital-7;
+    src: url('digital-7/digital-7.ttf');
+}
+
+:root {
+    --light-color:#EA2027;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #2C3A47;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    gap: 20px;
+}
+
+h2 {
+    color: #f16c13;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.frame {
+    width: 600px;
+    height: 300px;
+    background-color: #111;
+    border: 50px solid #f1a80b;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    line-height: 180px;
+}
+
+.clock {
+    font-family: digital-7;
+    color: white;
+    text-shadow: 0 0 20px var(--light-color);
+    position: relative;
+}
+
+/*.clock::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 48px;
+    top: 0;
+    filter: blur(40px);
+}*/
+
+.clock::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--light-color);
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    filter: blur(40px);
+}
+
+span {
+    color: white;
+   
+}
